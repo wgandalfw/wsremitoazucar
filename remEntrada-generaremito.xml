@@ -1,0 +1,53 @@
+<document>
+    <idReqCliente>232324</idReqCliente>
+    <remito>
+      <esEntregaMostrador>N</esEntregaMostrador>
+      <puntoEmision>2</puntoEmision>
+      <cuitTitularMercaderia>20282222303</cuitTitularMercaderia>
+      <tipoTitularMercaderia>1</tipoTitularMercaderia>
+      <numeroMaquila>3234234324</numeroMaquila>
+      <cuitAutorizadoRetirar>20282222303</cuitAutorizadoRetirar>
+      <receptor>
+         <cuitPaisReceptor>55000002002</cuitPaisReceptor>
+         <receptorNacional>
+            <cuitReceptor>30708772964</cuitReceptor>
+            <codDomReceptor>350</codDomReceptor>
+         </receptorNacional>
+         <receptorExtranjero>
+                  <denominacionReceptor></denominacionReceptor>
+                  <domicilioReceptor></domicilioReceptor>
+                  <cuitDespachante></cuitDespachante>
+                  <codigoAduana></codigoAduana>
+                  <numeroFactura></numeroFactura>
+               </receptorExtranjero>
+      </receptor>
+      <viaje>
+         <fechaInicioViaje>2020-02-27</fechaInicioViaje>
+         <kmDistancia>20</kmDistancia>
+         <tramo>
+            <automotor>
+               <codPaisTransportista>200</codPaisTransportista>
+               <transporteNacional>
+                  <cuitTransportista>20282222303</cuitTransportista>
+                  <cuitConductor>20282222303</cuitConductor>
+               </transporteNacional>
+               <dominioVehiculo>DFE 323</dominioVehiculo>
+               <dominioAcoplado></dominioAcoplado>
+            </automotor>
+         </tramo>
+      </viaje>
+      
+<arrayMercaderias>
+            <mercaderia>
+                <orden>1</orden>
+                <anioZafra>2019</anioZafra>
+                <cantidad>4000</cantidad>
+                <tipoProducto>2</tipoProducto>
+                <unidadMedida>1</unidadMedida>
+                <tipoEmbalaje>6</tipoEmbalaje>
+            </mercaderia>
+        </arrayMercaderias>
+      <importeCot>1</importeCot>
+      <comentarios></comentarios>
+   </remito>
+</document>

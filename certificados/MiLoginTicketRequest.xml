@@ -1,0 +1,8 @@
+<loginTicketRequest>
+<header>
+<uniqueId>000001</uniqueId>
+<generationTime>2022-05-09T21:27:21</generationTime>
+<expirationTime>2022-05-09T21:32:21</expirationTime>
+</header>
+<service>wsremazucar</service>
+</loginTicketRequest>

@@ -1,0 +1,56 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rem="http://ar.gob.afip.wsremazucar/RemAzucarService/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rem:generarRemitoRequest>
+         <authRequest>
+            <token>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3NvIHZlcnNpb249IjIuMCI+CiAgICA8aWQgc3JjPSJDTj13c2FhaG9tbywgTz1BRklQLCBDPUFSLCBTRVJJQUxOVU1CRVI9Q1VJVCAzMzY5MzQ1MDIzOSIgdW5pcXVlX2lkPSIxMDY3NDM0MDU4IiBnZW5fdGltZT0iMTY1MTc5ODM1MSIgZXhwX3RpbWU9IjE2NTE4NDE2MTEiLz4KICAgIDxvcGVyYXRpb24gdHlwZT0ibG9naW4iIHZhbHVlPSJncmFudGVkIj4KICAgICAgICA8bG9naW4gZW50aXR5PSIzMzY5MzQ1MDIzOSIgc2VydmljZT0id3NyZW1henVjYXIiIHVpZD0iU0VSSUFMTlVNQkVSPUNVSVQgMjAyODIyMjIzMDMsIENOPXJtIiBhdXRobWV0aG9kPSJjbXMiIHJlZ21ldGhvZD0iMjIiPgogICAgICAgICAgICA8cmVsYXRpb25zPgogICAgICAgICAgICAgICAgPHJlbGF0aW9uIGtleT0iMjAyODIyMjIzMDMiIHJlbHR5cGU9IjQiLz4KICAgICAgICAgICAgPC9yZWxhdGlvbnM+CiAgICAgICAgPC9sb2dpbj4KICAgIDwvb3BlcmF0aW9uPgo8L3Nzbz4K</token>
+        	  <sign>XSPdfYRCnYIKZMlVIxEDDWZ9GA7Cs6UdJChgOm+OliTdxO2DvVtZjnzwZXuJ0oYHXl+16pNIjnF7DEiqGsGOccZ2v+cKj9NacQEfwNExY1CVSO2kcJsTNnRVea/E3nuhZtft3Ml9NhDC7bAgDP3F8IYZa5cGTL1SpRiIh1g3fVM=</sign>
+            <cuitRepresentada>20282222303</cuitRepresentada>
+         </authRequest>
+         <idReqCliente>14</idReqCliente>
+         <remito>
+         <esEntregaMostrador>N</esEntregaMostrador>
+         <puntoEmision>2</puntoEmision>
+         <cuitTitularMercaderia>20282222303</cuitTitularMercaderia>
+         <tipoTitularMercaderia>1</tipoTitularMercaderia>
+         <numeroMaquila>3234234324</numeroMaquila>
+         <cuitAutorizadoRetirar>20282222303</cuitAutorizadoRetirar>
+         <receptor>
+         <cuitPaisReceptor>55000002002</cuitPaisReceptor>
+         <receptorNacional>
+            <cuitReceptor>30708772964</cuitReceptor>
+            <codDomReceptor>350</codDomReceptor>
+         </receptorNacional>         
+      </receptor>
+      <viaje>
+         <fechaInicioViaje>2022-05-08</fechaInicioViaje>
+         <kmDistancia>20</kmDistancia>
+         <tramo>
+            <automotor>
+               <codPaisTransportista>200</codPaisTransportista>
+               <transporteNacional>
+                  <cuitTransportista>20282222303</cuitTransportista>
+                  <cuitConductor>20282222303</cuitConductor>
+               </transporteNacional>
+               <dominioVehiculo>DFE 323</dominioVehiculo>
+               <dominioAcoplado></dominioAcoplado>
+            </automotor>
+         </tramo>
+      </viaje>
+      
+         <arrayMercaderias>
+            <mercaderia>
+                <orden>1</orden>
+                <anioZafra>2022</anioZafra>
+                <cantidad>5000</cantidad>
+                <tipoProducto>2</tipoProducto>
+                <unidadMedida>1</unidadMedida>
+                <tipoEmbalaje>6</tipoEmbalaje>
+            </mercaderia>
+        </arrayMercaderias>
+      <importeCot>1</importeCot>
+      <comentarios></comentarios>
+   </remito>
+      </rem:generarRemitoRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

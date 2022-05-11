@@ -1,0 +1,57 @@
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rem="http://ar.gob.afip.wsremazucar/RemAzucarService/">
+			   <soapenv:Header/>
+			   <soapenv:Body>
+			      <rem:generarRemitoRequest>
+			         <authRequest>
+			            <token></token>
+			        	  <sign></sign>
+			            <cuitRepresentada></cuitRepresentada>
+			         </authRequest>
+			         <idReqCliente>15</idReqCliente>
+			         <remito>
+			         <esEntregaMostrador>N</esEntregaMostrador>
+			         <puntoEmision>25</puntoEmision>
+			         <cuitTitularMercaderia>20282222303</cuitTitularMercaderia>
+			         <tipoTitularMercaderia>1</tipoTitularMercaderia>
+			         <numeroMaquila>1</numeroMaquila>
+			         <cuitAutorizadoRetirar>20282222303</cuitAutorizadoRetirar>
+			         <receptor>
+			         <cuitPaisReceptor>50000002000</cuitPaisReceptor>
+			         <receptorNacional>
+			            <cuitReceptor>30626863945</cuitReceptor>
+			            <codDomReceptor>1</codDomReceptor>
+			         </receptorNacional>         
+			      </receptor>
+			      <viaje>
+			         <fechaInicioViaje>2022-05-09</fechaInicioViaje>
+			         <kmDistancia>999</kmDistancia>
+			         <tramo>
+			            <automotor>
+			               <codPaisTransportista>200</codPaisTransportista>
+			               <transporteNacional>
+			                  <cuitTransportista>20257194478</cuitTransportista>
+			                  <cuitConductor>27000000006</cuitConductor>
+			               </transporteNacional>
+			               <dominioVehiculo>HHV393</dominioVehiculo>
+			               <dominioAcoplado>HIP454</dominioAcoplado>
+			            </automotor>
+			         </tramo>
+			      </viaje>      
+			         <arrayMercaderias>
+			            
+<mercaderia>
+			                <orden>1</orden>
+			                <anioZafra>2021</anioZafra>
+			                <cantidad>29120</cantidad>
+			                <tipoProducto>3</tipoProducto>
+			                <unidadMedida>1</unidadMedida>
+			                <tipoEmbalaje>1</tipoEmbalaje>
+			        </mercaderia>
+			        </arrayMercaderias>
+			      <importeCot>1</importeCot>
+			      <comentarios></comentarios>
+			   </remito>
+			      </rem:generarRemitoRequest>
+			   </soapenv:Body>
+			</soapenv:Envelope>
