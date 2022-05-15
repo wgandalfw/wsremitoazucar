@@ -7,7 +7,9 @@ from datetime import timedelta as td
 import xml.etree.ElementTree as ET
 from suds.client import Client
 import suds
-
+'''
+probando sinc con git
+'''
 def iniciar_proceso():
     if not os.path.isfile("wsaa.ini"):
         print("No se encontro el archivo de configuracion wsaa.ini")
