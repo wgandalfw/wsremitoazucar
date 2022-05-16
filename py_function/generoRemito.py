@@ -1,3 +1,6 @@
+'''
+PROCESO DE GENERACION DE REMITO
+'''
 from suds.client import Client
 import suds
 import os
@@ -7,6 +10,9 @@ from xml.dom import minidom
 configuracion = ConfigParser()
 configuracion.read("wsaa.ini")
 entrada = configuracion['archivos']['entrada']
+
+def is_empty(a):
+    return len(a) == 0
 
 def getAuth(estructura):
     auto=estructura.factory.create('ns0:AuthRequestType')
@@ -40,7 +46,8 @@ def getRemito(estructura):
         remito.puntoEmision = hijo.getElementsByTagName('puntoEmision')[0].firstChild.data
         remito.cuitTitularMercaderia = hijo.getElementsByTagName('cuitTitularMercaderia')[0].firstChild.data
         remito.tipoTitularMercaderia = hijo.getElementsByTagName('tipoTitularMercaderia')[0].firstChild.data
-        remito.numeroMaquila = hijo.getElementsByTagName('numeroMaquila')[0].firstChild.data
+        if is_empty(hijo.getElementsByTagName('numeroMaquila')[0].firstChild.data):
+          remito.numeroMaquila = hijo.getElementsByTagName('numeroMaquila')[0].firstChild.data
         remito.cuitAutorizadoRetirar = hijo.getElementsByTagName('cuitAutorizadoRetirar')[0].firstChild.data
         remito.importeCot = hijo.getElementsByTagName('importeCot')[0].firstChild.data
         nodoReceptor = remitoArchivo.getElementsByTagName('receptor')

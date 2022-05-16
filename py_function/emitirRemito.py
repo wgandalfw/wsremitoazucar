@@ -49,18 +49,29 @@ def iniciar_proceso():
 def emitirRemito():
     try:
         iniciar = iniciar_proceso()
+        tree = ET.parse(iniciar['entrada'])
+        root = tree.getroot()
+        for hijo in root.findall('./emitirRemito'):
+            codigoRemito = hijo.find('codigoRemito').text
+            cuitConductor = hijo.find('cuitConductor').text
+            cedulaConductor = hijo.find('cedulaConductor').text
+            nombreConductor = hijo.find('nombreConductor').text
+            apellidoConductor = hijo.find('apellidoConductor').text
+            dominioVehiculo = hijo.find('dominioVehiculo').text
+            dominioAcoplado = hijo.find('dominioAcoplado').text
+            fechaInicioViaje = hijo.find('fechaInicioViaje').text
         resultado = iniciar['cliente'].service.emitirRemito(authRequest={'token': iniciar['token'], 'sign': iniciar['sign'], 'cuitRepresentada': iniciar['cuitRepresentada']},
-                                                            emitirRemito={'codigoRemito' : 1,
+                                                            emitirRemito={'codigoRemito' : codigoRemito,
                                                                           'transporte' : {
                                                                               'conductor' : {
                                                                                   'conductorNacional' : {
-                                                                                      'cuitConductor' : 20282222303
+                                                                                      'cuitConductor' : cuitConductor
                                                                                   },
                                                                               },   
-                                                                              'dominioVehiculo' : 549,
-                                                                              'dominioAcoplado' : 323
+                                                                              'dominioVehiculo' : dominioVehiculo,
+                                                                              'dominioAcoplado' : dominioAcoplado
                                                                               }, 
-                                                                          'fechaInicioViaje' : '2022-05-05'
+                                                                          'fechaInicioViaje' : fechaInicioViaje
                                                                           })        
         archivo=open ('remSalida.txt','w')
         archivo.write(str(resultado[0])+'\n')
