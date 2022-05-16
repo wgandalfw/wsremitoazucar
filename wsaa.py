@@ -59,6 +59,7 @@ if fecha_expiracion< datetime.now():
     root.find('service').text=permiso
 
     doc_xml.write(xml)
+    
     try:
         os.system('"'+bat+' '+os.getcwd()+"\\openssl\\bin "+xml+' '+cms+' '+pem+' '+key+'"')
     except:
