@@ -46,24 +46,6 @@ def iniciar_proceso():
     result['salida'] = salida
     return result
 
-def consultarCodigosDomicilio():    
-    try:
-        iniciar = iniciar_proceso()
-        with open(iniciar['entrada'],"r") as archivo:
-            for linea in archivo:
-                cuitTitula = linea
-        resultado = iniciar['cliente'].service.consultarCodigosDomicilio(authRequest={'token': iniciar['token'], 'sign': iniciar['sign'], 'cuitRepresentada': iniciar['cuitRepresentada']},
-                                                            cuitTitularDomicilio=cuitTitula)
-        resultado = resultado[0]
-        archivo=open (iniciar['salida'],'w')
-        for a in resultado:
-            for b in a[1] :
-                archivo.write(str(b.codigo)+'\t'+b.descripcion+'\n')
-        archivo.close()
-    except suds.WebFault as error:
-        print("se ha producido un error: ", error)
-
-
 def emitirRemito():
     try:
         iniciar = iniciar_proceso()
@@ -90,4 +72,4 @@ def emitirRemito():
     except suds.WebFault as error:
         print("se ha producido un error: ", error)
 
-consultarCodigosDomicilio()
+emitirRemito()
